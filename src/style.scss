@@ -1,0 +1,356 @@
+.formcontainer{
+    background-color: #a7bcff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .formwrapper{
+        background-color: white;
+        padding:20px 60px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        .logo{
+            color: #5d5b8d;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .title{
+            color: cadetblue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-bottom: 10px;
+        }
+
+        form{
+
+            
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+
+            input{
+                padding: 15px;
+                border: none;
+                border-bottom:1px solid #5d5b8d;
+                width: 100%;
+                outline: none;
+            }
+            button{
+                background-color: #7b96ec;
+                color: white;
+                padding: 10px;
+                width: 100%;
+                border: none;
+                border-radius: 2px;
+                cursor: pointer;
+
+            }
+            p{
+                color: #7b96ec;
+                font-size: 12px;
+                margin-top: 10px;
+                a{
+                    font-size: 14px;
+                }
+
+            }
+            label{
+                font-size: 16px;
+                display: flex;
+                justify-content: center;
+                
+                width: 100%;
+                align-items: center;
+                span{
+                    margin-left: 10px;
+                }
+
+            }
+            
+
+        }
+
+    }
+}
+     
+.home{
+   background-color: #a7bcff;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    
+    .container{
+        display: flex;
+        border: 1px solid white;
+        border-radius: 10px;
+        width: 70%;
+        height: 80%;
+        overflow: hidden;
+//sidebar style
+       .sidebar{
+        flex: 1;
+        border-right: 1px solid #5d5b8d;
+        background-color: #5d5b8d;
+        width: 30%;
+
+        .navbar{
+            display: flex;
+            align-items: center;
+            background-color: #2f2d52;
+            justify-content: space-between;
+            height: 50px;
+            padding: 5px 10px;
+            color: #ddddf7;
+            .logo{
+                font-weight: bold;
+            }
+            .user{
+                display: flex;
+                gap: 6px;
+                img{
+                    height: 24px;
+                    width: 24px;
+                    background-color: #ddddf7;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+            button{
+                background-color: #ddddf7;
+                border-radius: 6px;
+                border: none;
+                cursor: pointer;
+            }
+
+        }
+        .search{
+            margin-bottom: 5px;
+            width: 100%;
+            border-bottom: 1px solid gray;
+            
+            
+            .searchForm{
+                width: 100%;
+                
+                
+            }
+            
+            input{
+                background-color: transparent;
+                border: none;
+                color: white;
+                outline: none;
+                border-radius: 3px;
+                font-size: medium;
+                align-self: flex-start;
+                margin: 0 10px;
+                padding: 3px 0;
+                width: 90%;
+                
+                
+                &::placeholder{
+                    color: lightgray;
+                }
+            }
+            
+            
+            
+            
+           
+        }
+        
+        
+       }
+
+      
+
+       .chats{
+        margin-bottom: 5px;
+        height: 50px;
+        .userchat{
+            gap: 4px;
+        }
+        .userchatinfo{
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            padding-left: 10px;
+        }
+       
+        span{
+            font-size: 18px;
+            font-weight: 500;
+            padding: 0;
+            
+            margin: 0;
+        }
+        p{
+            
+            margin: 0;
+        }
+
+       }
+
+    }
+//sidebar userchat
+    .userchat{
+        
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: lightgray;
+        
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: orangered;
+        }
+       
+        
+        
+    }
+    .userchat:hover{
+        background-color: #2f2d52;
+    }
+
+    //chat
+
+
+    .chat{
+        
+        flex:2;
+        width: 70%;
+        
+        .chatInfo{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+            background-color: rgb(78, 43, 206);
+            color: lightcyan;
+
+            span{
+                margin-left: 8px;
+                font-weight: bold;
+
+            }
+            .chatIcons{
+                display: flex;
+                gap: 15px;
+                
+            }
+            .chatIcons :last-child{
+                margin-right: 8px;
+            }
+        }
+
+        .messages{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            overflow: scroll;
+            background-color: rgb(137, 142, 140);
+            height: calc(100% - 100px);
+
+//message style
+            .message{
+                display: flex;
+                gap: 10px;
+                .messageinfo{
+                    display: flex;
+                    padding: 4px;
+                    flex-direction: column;
+                    font-size: small;
+                    color: rgb(123, 31, 31);
+
+                    img{
+                        width: 22px;
+                        height: 22px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        background-color: #1e4bdf;
+                    }
+                }
+                .messageContenet{
+
+                    border-radius: 6px 6px 6px 0;
+                    background-color: white;
+                    width: auto;
+                    padding: 2px 7px;
+
+
+                }
+            }
+//otherMessage
+            .messageOtherside{
+                
+                display: flex;
+                
+                justify-content: end;
+                gap: 6px;
+                img{
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    background-color: #1e4bdf;
+                }
+                .messageotherinfo{
+                    display: flex;
+                    padding: 4px;
+                    flex-direction: column;
+                    font-size: small;
+                    color: rgb(224, 81, 81);
+                
+                }
+                .messageother{
+                    border-radius: 12px 12px 0px 12px;
+                    background-color: white;
+                    width: auto;
+                    padding: 2px 7px;
+                    
+                }
+            }
+
+        }
+        .input{
+            background-color: aliceblue;
+            height: 40px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            input{
+                border: none;
+                outline: none;
+                background-color: transparent;
+                &::placeholder{
+                    color: #1e4bdf;
+                }
+            }
+            .send{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+
+                button{
+                    background-color: transparent;
+                    border: none;
+                    &:hover{
+                       
+                    }
+                }
+               
+                
+            }
+        }
+        
+       }
+
+}
